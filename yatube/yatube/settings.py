@@ -54,6 +54,8 @@ ROOT_URLCONF = 'yatube.urls'
 
 # Путь к директории с шаблонами вынесен в переменную:
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+# Путь к директории с static файлами
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] 
 
 TEMPLATES = [
     {
