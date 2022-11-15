@@ -2,15 +2,21 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
+# Импортируем загрузчик.
+from django.template import loader
 
 
 # Главная страница
 def index(request):
-    return HttpResponse('Ты <i>не можешь</i> получить правильные <b>ответы</b>,<br> '
-        'если у тебя нет правильных <s>вопросов</s> запросов.')
+    template = 'posts/index.html'
+    # return HttpResponse(f'Main page (index.html)')
+    return render(request, template)
+
+    return render(request, template)
 
 def group(request):
-    return HttpResponse('Group Posts')
+    template = 'posts/group_list.html'
+    return render(request, template)
 
 
 def user(request, name):
